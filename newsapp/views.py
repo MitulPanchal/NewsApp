@@ -7,7 +7,7 @@ from newsapi import NewsApiClient
 def index(request):
 
     newsapi = NewsApiClient(api_key = '52af66723d7a4b10b0086de9d5f1ff54')
-    top = newsapi.get_top_headlines(sources = 'techcrunch')
+    top = newsapi.get_top_headlines(sources = 'bbc-news')
 
     l = top['articles']
     desc = []
