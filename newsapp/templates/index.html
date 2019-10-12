@@ -1,0 +1,32 @@
+<!DOCTYPE HTML>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title></title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    </head>
+    <body>
+            <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+                    <a class="navbar-brand" href="#">Get the latest news on our website</a>                    
+                  </nav>
+
+        <div class="container" style="padding-top: 5em;">
+            <div class="row">
+            {% for new,des,i in mylist %}
+            <div class="col-md-4">
+                <div class="card" style="width: 18rem;">
+                    <img class="card-img-top" src="{{ i }}" alt="Card image cap">                    
+                    <div class="card-body">
+                        <h5 class="card-title text-weight-bold">{{ new }}</h5>
+                        <p class="card-text">
+                            <h4>description:</h4>{{ des }}
+                        </p>
+                    </div>
+                </div>
+            </div>
+            {{ value|linebreaks }}
+            {% endfor %}
+        </div>
+        </div>
+    </body>
+</html>
